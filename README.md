@@ -5,12 +5,16 @@ IoT-Ticket Python client provides an easy-to-use library and examples so that yo
 ## System requirements
 
 This Python library required Python 3 installed in your system.
+Lastest version of Python could be downloaded from: https://www.python.org/downloads/
+When Python installation file is downloaded, It could be installed into the system like normal program
 
 ## Getting started
 1. This Python library required Python 3 installed in your system.
 2. Create your own IoT-Ticket account at https://www.iot-ticket.com/ (Request an invitation)
 3. Wait for the account activation email
-4. When Python installation file is downloaded, It could be installed into the system like normal program
+4. Download library from github.
+5. Extract the Zip file, copy iotticket folder and paste it to your Python directory (Example: "C:\Users\your_username\AppData\Local\Programs\Python\Python35-32").
+6. Start using the library in your application.
 
 ### Using the library
 
@@ -22,7 +26,7 @@ from iotticket.models import deviceattribute
 from iotticket.models import datanodesvalue
 from iotticket.client import Client
 </code></pre>
-The iotticketpythonclient is the main library to be used. All the rest above is used to create objects of its class.
+The iotticket.client is the main library to be used. All the rest above is used to create objects of its class.
 
 ### Provided funtion in client
 
