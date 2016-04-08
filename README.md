@@ -169,10 +169,11 @@ fd = "2016-03-22 17:22:00"
 td = "2016-03-22 17:25:00"
 
 c.readdata(deviceId, cr, fd , td, limit)
-</code></pre>
+
 fromdate and todate is not required. it can be set and passed as argument.
 If limit is provided but not fromdate and todate, then the function can be called as c.readdata(deviceId, cr, "", "", limit)
 If no extra argument is provided, simply call c.readdata(deviceId, cr)
+</code></pre>
 ## API documentation
 This C++ client library uses the IoT-Ticket REST API. The documentation for the underlying REST service can be found from
 https://www.iot-ticket.com/images/Files/IoT-Ticket.com_IoT_API.pdf
