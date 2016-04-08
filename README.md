@@ -10,7 +10,7 @@
 <li>Create your own IoT-Ticket account at <a href="https://www.iot-ticket.com/">https://www.iot-ticket.com/</a> (Request an invitation)</li>
 <li>Wait for the account activation email</li>
 <li>Download Zip file</li>
-<li>Extract the Zip file, copy iotticket folder and paste it to your Python directory &nbsp&nbsp&nbsp&nbsp (Example: "C:\Users\your_username\AppData\Local\Programs\Python\Python35-32")</li>
+<li>Extract the Zip file, copy iotticket folder and paste it to your Python directory &nbsp;&nbsp;&nbsp;&nbsp; (Example: "C:\Users\your_username\AppData\Local\Programs\Python\Python35-32")</li>
 <li>Start using it in your application</li>
 </ol>
 <h3><a id="Building_the_library_16"></a>Using the library</h3>
@@ -56,7 +56,7 @@ deviceId = data["deviceId"]
 baseurl = data["baseurl"]
 </code></pre>
 <p>The examples could be run by using command. You need to provide command line argument which point to your config file:</p>
-<pre><code class="language-sh">$ python file_name.py &ltpath_to_your_config_file&gt
+<pre><code class="language-sh">$ python file_name.py &lt;path_to_your_config_file&gt;
 </code></pre>
 <h3><a id="Example_code_30"></a>Verify or Unverify Certificate</h3>
 <pre><code>c = Client(baseurl, username, password, False)
