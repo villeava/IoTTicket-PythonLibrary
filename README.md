@@ -1,6 +1,6 @@
 # IoT-Ticket Python client
 
-IoT-Ticket Python client provides an easy-to-use library and examples so that Your application can take advantage of the versatile IoT-Ticket cloud tools.
+IoT-Ticket Python client provides an easy-to-use library and examples so that your application can take advantage of the versatile IoT-Ticket cloud tools.
 
 ## System requirements
 
