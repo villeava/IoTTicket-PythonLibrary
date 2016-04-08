@@ -27,7 +27,6 @@ The iotticketpythonclient is the main library to be used. All the rest above is 
 ### Provided funtion in client
 
 Here are the list of provided functions
-
 <pre><code>
 getdevice(self, deviceId)
 getdevices(self, limit, offset)
@@ -39,12 +38,9 @@ readdata(self, deviceId, criteriaobj, fromdate, todate, limit)
 writedata(self, deviceId, *datanodevalueobj)
 </code></pre>
 ### Example code
-
 The library contains a demo which provides a complete example application. Also, the unit tests can be used as a reference.
-
 demo/demo.py
 test/unittest.py
-
 NOTE: In order to run the demo application or unittest provided in our project, you need to create yourself a config.json file.
 <pre><code>
 {
@@ -70,8 +66,7 @@ $ python file_name.py <path_to_your_config_file>
 <pre><code>
 c = Client(baseurl, username, password, False)
 </code></pre>
-# True is default if no argument is given. If False is given, the unverified mode will be on. It will not check url certificate.
-
+True is default if no argument is given. If False is given, the unverified mode will be on. It will not check url certificate.
 ### Registering a device
 <pre><code>
 d = device()
@@ -79,8 +74,8 @@ d.set_name("Johan")
 d.set_manufacturer("Wapice")
 d.set_type("employee")
 d.set_description("Im trainee")
-d.set_attributes(deviceattribute("a","b"), deviceattribute("c","d"), deviceattribute("key","value")) [replace the arguments by list of deviceattribute object]
-	
+d.set_attributes(deviceattribute("a","b"), deviceattribute("c","d"), deviceattribute("key","value")) [replace the arguments by list of deviceattribute object]	
+
 c = client(baseurl, username, password)
 
 c.registerdevice(d)
@@ -113,7 +108,6 @@ def registerdevice(self, deviceobj):
 			return "Device is not valid."
 </code></pre>
 ### Validate function
-
 Validate function using declared criteria in class
 <pre><code>
 crit = [{"name": {"max_length":100, "nullable" : False}}, {"unit": {"max_length": 10}}, {"path": {"max_length": 1000, "regex" : "(\\/[a-zA-Z0-9]+){1,10}"}}]
@@ -148,8 +142,8 @@ nv = datanodesvalue()
 nv.set_name("Finger No")
 nv.set_path("fingerno")
 nv.set_dataType("double")
-nv.set_value(10)
-	
+nv.set_value(10)	
+
 c = client(baseurl, username, password)
 
 c.writedata(deviceId, nv)
@@ -174,7 +168,6 @@ c.readdata(deviceId, cr, fd , td, limit)
 fromdate and todate is not required. it can be set and passed as argument.
 If limit is provided but not fromdate and todate, then the function can be called as c.readdata(deviceId, cr, "", "", limit)
 If no extra argument is provided, simply call c.readdata(deviceId, cr)
-
 ## API documentation
 This C++ client library uses the IoT-Ticket REST API. The documentation for the underlying REST service can be found from
 https://www.iot-ticket.com/images/Files/IoT-Ticket.com_IoT_API.pdf
