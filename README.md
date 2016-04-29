@@ -14,7 +14,7 @@ When Python installation file is downloaded, It could be installed into the syst
 2. Create your own IoT-Ticket account at https://www.iot-ticket.com/ (Request an invitation)
 3. Wait for the account activation email
 4. Download library from github.
-5. Extract the Zip file, copy iotticket folder and paste it to your Python directory (Example: "C:\Users\your_username\AppData\Local\Programs\Python\Python35-32").
+5. Extract the Zip file, point Pythonpath to the directory that contain the library.
 6. Start using the library in your application.
 </code></pre>
 ### Using the library
