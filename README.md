@@ -66,7 +66,7 @@ baseurl = data["baseurl"]
 </code></pre>
 The examples could be run by using command. You need to provide command line argument which point to your config file:
 <pre><code>
-$ python file_name.py <path_to_your_config_file>
+$ python file_name.py path_to_your_config_file
 </code></pre>
 ### Verify or Unverify Certificate
 <pre><code>
