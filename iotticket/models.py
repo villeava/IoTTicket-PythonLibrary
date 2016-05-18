@@ -301,7 +301,7 @@ class vts(object):
 #datanodes value class
 class datanodesvalue(object):
 	""" Contain datanode infomation and list of datanode value depends on how the url is passed."""
-	crit = [{"name": {"max_length":100, "nullable" : False, "dataType" : str}}, {"unit": {"max_length": 10, "dataType" : str}}, {"path": {"max_length": 1000, "regex" : "(\\/[a-zA-Z0-9]+){1,10}$", "dataType" : str}},{"v": {"nullable" : False, "dataType" : float}}]
+	crit = [{"name": {"max_length":100, "nullable" : False, "dataType" : str}}, {"unit": {"max_length": 10, "dataType" : str}}, {"path": {"max_length": 1000, "regex" : "(\\/[a-zA-Z0-9]+){1,10}$", "dataType" : str}},{"v": {"nullable" : False, "dataType" : "multi"}}]
 	unit = ""
 	dataType = ""
 	href = ""
@@ -353,12 +353,9 @@ class datanodesvalue(object):
 		return self.path
 	def set_values(self, *new_value):
 		for a in new_value:
-			if(validate(a)):
-				j_data = {"v":a.v,"ts":a.ts}
-				self.j_list.append(j_data)
-				self.values = self.j_list
-			else:
-				print("Value : ", a , " is not valid.")
+			j_data = {"v":a.v,"ts":a.ts}
+			self.j_list.append(j_data)
+			self.values = self.j_list
 	def get_values(self):
 		return self.valueslist	
 	def set_value(self, v):

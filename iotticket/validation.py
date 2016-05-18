@@ -37,7 +37,23 @@ def validate(obj):
 					if( not re.match(critlist[critlistkey], getattr(obj,key), flags = 0)):	
 						isValid = False
 				if critlistkey == "dataType":
-					if not isinstance(getattr(obj,key), critlist[critlistkey]):
-						isValid = False
+					if critlist[critlistkey] == "multi":
+						if obj.dataType == "string" or obj.dataType == "String":
+							if not isinstance(getattr(obj,key), str):
+								isValid = False
+						elif obj.dataType == "Double" or obj.dataType == "double":
+							if not isinstance(getattr(obj,key), float):
+								isValid = False
+						elif obj.dataType == "Boolean" or obj.dataType == "boolean":
+							if not isinstance(getattr(obj,key), bool):
+								isValid = False
+						elif obj.dataType == "Long" or obj.dataType == "long":
+							if not isinstance(getattr(obj,key), int):
+								isValid = False
+						else:
+							isValid = False
+					else:		
+						if not isinstance(getattr(obj,key), critlist[critlistkey]):
+							isValid = False
 	return isValid						
 				
