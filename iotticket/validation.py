@@ -27,8 +27,9 @@ def validate(obj):
 			critlist = n[key]
 			for critlistkey in critlist:
 				if critlistkey == "max_length":
-					if len(getattr(obj,key)) > critlist[critlistkey]:
-						isValid = False
+					if getattr(obj,key) != None:
+						if len(getattr(obj,key)) > critlist[critlistkey]:
+							isValid = False
 				if critlistkey == "nullable":
 					if critlist[critlistkey] is False:
 						if(getattr(obj,key) == "" or getattr(obj,key) == None or getattr(obj,key) == 0):
