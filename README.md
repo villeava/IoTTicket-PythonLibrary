@@ -52,7 +52,7 @@ NOTE: In order to run the demo application or unittest provided in our project, 
     "username": "your_username",
     "password": "your_password",
     "deviceId": "your_deviceId",
-    "baseurl": "your_baseURL"
+    "baseurl": "https://my.iot-ticket.com/api/v1/"
 }
 </code></pre>
 NOTE: The base URL if you are using our IoT server will be: "https://my.iot-ticket.com/api/v1/"
