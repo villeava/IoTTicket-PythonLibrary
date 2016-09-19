@@ -32,7 +32,7 @@ def validate(obj):
 							isValid = False
 				if critlistkey == "nullable":
 					if critlist[critlistkey] is False:
-						if(getattr(obj,key) == "" or getattr(obj,key) == None or getattr(obj,key) == 0):
+						if(getattr(obj,key) == "" or getattr(obj,key) == None):
 							isValid = False
 				if critlistkey == "regex":
 					if( not re.match(critlist[critlistkey], getattr(obj,key), flags = 0)):	
