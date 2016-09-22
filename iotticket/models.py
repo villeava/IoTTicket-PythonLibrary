@@ -21,6 +21,7 @@
 #lib
 import urllib.request #import request
 import json #import json
+import time #import time to get the current timestamp
 import urllib.error as err
 from iotticket.stringbuilder import StringBuilder
 from iotticket.validation import validate
@@ -312,7 +313,7 @@ class datanodesvalue(object):
 	values = None
 	valueslist = []			
 	j_list = []	
-	def __init__(self, unit = "", dataType = "", name = "", path = "", values = None, v= 0, ts= 0):
+	def __init__(self, unit = "", dataType = "", name = "", path = "", values = None, v= 0, ts= int(round(time.time() * 1000))):
 		self.unit = unit
 		self.dataType = dataType
 		self.name = name
